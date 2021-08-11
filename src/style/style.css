@@ -1,0 +1,205 @@
+:root {
+  --header-height: 4rem;
+  --banner-height: 400px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Raleway";
+  background-color: #eee;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.wrapper {
+  max-width: 1240px;
+  margin-inline: auto;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* Header */
+
+.header {
+  background-color: rgba(0, 0, 0, 0.85);
+  height: var(--header-height);
+  width: 100%;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 0 1rem;
+  height: 100%;
+}
+
+/* Nav */
+
+.nav-list {
+  column-gap: 1rem;
+  list-style: none;
+  display: flex;
+  height: 100%;
+}
+
+.nav-list a {
+  color: #eee;
+  padding: 1rem;
+}
+
+.nav-list li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-list li:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-list li:active {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Logo */
+
+.logo {
+  height: var(--header-height);
+}
+
+.logo img {
+  height: var(--header-height);
+  padding: 0.5rem;
+  width: 100%;
+}
+
+/* Banner */
+
+.banner {
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwallpapercave.com%2Fwp%2FN0lYS5v.jpg&f=1&nofb=1");
+  background-position: center;
+  background-size: cover;
+  height: var(--banner-height);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+  position: relative;
+  margin-bottom: 2rem;
+  clip-path: polygon(0 0, 100 0, 100 90, 0 100);
+}
+
+.banner::after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.banner-content {
+  position: relative;
+  z-index: 100;
+  text-align: center;
+  line-height: 1.5;
+  color: #eee;
+}
+
+/* Info */
+
+.info-content {
+  display: flex;
+  justify-content: space-around;
+  height: var(--banner-height);
+}
+
+.info-content img {
+  width: 300px;
+  aspect-ratio: 4/3;
+  object-fit: contain;
+  border-radius: 1rem;
+}
+
+.info-text {
+  width: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-text p {
+  line-height: 1.4;
+  color: #555;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/* Char Grid */
+.char-grid-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+/* Char Card */
+.charCard {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.char-image img {
+  aspect-ratio: 4/3;
+  width: 100%;
+}
+
+.char-content {
+  padding: 0.5rem 0 0.5rem 0.5rem;
+}
+
+.char-content h2 {
+  color: #222;
+}
+.char-content p {
+  color: #444;
+}
+.char-content p:last-child {
+  color: hsl(103.2, 55.6%, 26.5%);
+}
+
+/* Footer */
+.footer {
+  margin-top: 1rem;
+  color: #eee;
+  height: 20rem;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-content ul {
+  list-style: none;
+}
